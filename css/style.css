@@ -3,4 +3,25 @@
     padding-left: 10px;
     text-align: center;
     vertical-align: center;
+    
+}
+
+.seccion{
+    border-style: dotted;
+    border-color: gray;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+#footer{
+    text-align: center;
+}
+
+.circulo {
+    width: 100px;
+    height: 100px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: rgb(79, 79, 238);
 }

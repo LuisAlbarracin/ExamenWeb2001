@@ -51,7 +51,11 @@ function llenarNoticias(data){
 function cargarNoticias(){
     const url1 = "https://carlosreneas.github.io/endpoints/noticias.json";
     fetch(url1)
-    .then((response)=>response.json())
+    .then((response)=>{
+        console.log(response)
+        
+        response.json()
+        })
     .then((data)=>{
         console.log(data)
         llenarNoticias(data)

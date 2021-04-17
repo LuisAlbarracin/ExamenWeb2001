@@ -11,6 +11,8 @@
         integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
         integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -31,59 +33,64 @@
         <div class="row">
             <div class="col-sm-12">
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <div class="container-fluid">
-                        <a class="navbar-brand" href="#">Inicio</a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                            <div class="navbar-nav">
-                                <a class="nav-link active" aria-current="page" href="#">Salon</a>
-                                <a class="nav-link" href="#">Colegio</a>
-                                <a class="nav-link" href="#">Región</a>
-                                <a class="nav-link" href="#">Tecnología</a>
-                                <a class="nav-link" href="#">Farándula</a>
-                                <a class="nav-link" href="#">Deportes</a>
-                                <a class="nav-link" href="#">Juegos</a>
-                            </div>
+                    <a class="navbar-brand" href="#">Inicio</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <a class="nav-link" href="#">| Salon</a>
+                            <a class="nav-link" href="#">| Colegio</a>
+                            <a class="nav-link" href="#">| Región</a>
+                            <a class="nav-link" href="#">| Tecnología</a>
+                            <a class="nav-link" href="#">| Farándula</a>
+                            <a class="nav-link" href="#">| Deportes</a>
+                            <a class="nav-link" href="#">| Juegos</a>
+                        </div>
+                    </div>
+                    <div class="contenido">
+                        <span id="fecha"></span>
+                        <div id="gafas">
+                            <i class="fas fa-glasses" id="icono"></i>
                         </div>
                     </div>
                 </nav>
+
+
             </div>
 
-            <div class="col-md-8">
-                <main>
-                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="..." class="d-block w-100" alt="...">
-                            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-9">
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="..." class="d-block w-100" alt="..." id="imagenCarusel">
                         </div>
                     </div>
-            </div>
-            <div class="col-md-8" id="noticias">
+                </div>
+                <div class="" id="noticias" class="seccion p-3">
 
-                <p id="mas-noticias">Todas las noticias</p>
+                </div>
             </div>
-            </main>
-        </div>
-
-        <div class="col-md-4">
-            <aside>
-                <section class="seccion" id="deportes">
-                    <h3>Deportes</h3>
-                </section>
-                <section class="seccion" id="tecnologia">
-                    <h3>Tecnología</h3>
-                </section>
-            </aside>
+            <div class="col-md-3">
+                <aside>
+                    <section class="seccion" id="deportes">
+                        <h3>Deportes</h3>
+                    </section>
+                    <section class="seccion" id="tecnologia">
+                        <h3>Tecnología</h3>
+                    </section>
+                </aside>
+            </div>
         </div>
     </div>
     </div>
 
-    <div class="container m-10">
+    <div class="container-fluid enlaces">
         <div class="row">
             <div class="col-md-8">
 
@@ -101,14 +108,13 @@
             </div>
             <div class="col-md-4">
                 <ul>
-                    <li>Email: <a href="#"></a>periodico@colegioufps.edu.co</li>
+                    <li>Email: <a href="#">periodico@colegioufps.edu.co</a></li>
                     <li>Twitter: @periodico</li>
                     <li>Av 20N 12-34 Cúcuta</li>
                 </ul>
             </div>
         </div>
     </div>
-
     <footer>
         <p id="footer">2021 @ Colegio Gimnasio UFPS</p>
     </footer>

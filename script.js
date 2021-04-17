@@ -38,32 +38,38 @@ function cargarTecnologia(){
     .catch((err) => console.log(err))
 }
 
+
 function llenarNoticias(data){
     const noticias = document.getElementById('noticias')
-    noticias.innerHTML += `<h3>${data[0].titulo} - Colegio - ${data[0].fecha}</h3><div class="section"><p>${data[0].descripcion}</p><a href="#">Ver Mas</a></div>
-    <h3>${data[1].titulo} - Colegio - ${data[0].fecha}</h3><div class="section"><p>${data[1].descripcion}</p><a href="#">Ver Mas</a></div>
-    <h3>${data[2].titulo} - Colegio - ${data[0].fecha}</h3><div class="section"><p>${data[2].descripcion}</p><a href="#">Ver Mas</a></div>
-    <p id="Masnoticias">Todas las noticias</p>
+    noticias.innerHTML += `<h3 class="noticia">${data[0].titulo} - Colegio - ${data[0].fecha}</h3><div class="seccion"><span>${data[0].descripcion}. &nbsp<a href="#">Ver Mas</a></span></div>
+    <h3 class="noticia">${data[1].titulo} - Colegio - ${data[0].fecha}</h3><div class="seccion pt-20"><span>${data[1].descripcion}. &nbsp<a href="#">  Ver Mas</a></span></div>
+    <h3 class="noticia">${data[2].titulo} - Colegio - ${data[0].fecha}</h3><div class="seccion pt-20"><spanp>${data[2].descripcion} &nbsp<a href="#">  Ver Mas</a></span></div>
+    <p id="mas-noticias">Todas las noticias</p>
     `
+    const imagen = document.getElementById('imagenCarusel')
+    imagen.src= data[0].img
 }
+
 
 
 function cargarNoticias(){
     const url1 = "https://carlosreneas.github.io/endpoints/noticias.json";
     fetch(url1)
-    .then((response)=>{
-        console.log(response)
-        
-        response.json()
-        })
+    .then((response)=>response.json())
     .then((data)=>{
-        console.log(data)
         llenarNoticias(data)
     })
     .catch((err) => console.log(err))
 }
 
+function cargarFecha(){
+    const fecha = document.getElementById('fecha')
+    const meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
+    const hoy = new Date();
+    fecha.innerHTML = hoy.getDate()+ " de " + meses[hoy.getMonth()] + " del " +hoy.getFullYear() + " Cúcuta" 
+}
 
+cargarFecha()
 cargarDeportes()
 cargarTecnologia()
-llenarNoticias()
+cargarNoticias()

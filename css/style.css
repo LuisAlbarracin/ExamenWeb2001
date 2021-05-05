@@ -89,6 +89,7 @@ hr{
 .contenido{
     width: 25%;
     display: grid;
+    text-align: end;
 }
 
 #fecha{

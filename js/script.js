@@ -2,7 +2,11 @@
 function llenarDeportes(data) {
 
     const depor = document.getElementById("deportes")
-    depor.innerHTML += `<p id="deportes-${data[0].id}">${data[0].titulo}</p><hr><p id="deportes-${data[1].id}">${data[1].titulo}</p><hr><p id="deportes-${data[2].id}">${data[2].titulo}</p>`
+    depor.innerHTML += `
+    <p ><a href="deportes.html?id=${data[0].id}" class="text-dark text-decoration-none">${data[0].titulo}</p><hr>
+    <p ><a href="deportes.html?id=${data[1].id}" class="text-dark text-decoration-none">${data[1].titulo}</p><hr>
+    <p ><a href="deportes.html?id=${data[2].id}" class="text-dark text-decoration-none">${data[2].titulo}</p>
+    `
 
 
 }
@@ -20,7 +24,11 @@ function cargarDeportes() {
 
 function llenarTecnologia(data) {
     const tecnologia = document.getElementById("tecnologia")
-    tecnologia.innerHTML += `<p id="tecnologia-${data[0].id}">${data[0].titulo}</p><hr><p id="${data[1].id}">${data[1].titulo}</p><hr><p id="${data[2].id}">${data[2].titulo}</p>`
+    tecnologia.innerHTML += `
+    <p> <a href="tecnologia.html?id=${data[0].id}" class="text-dark text-decoration-none"> ${data[0].titulo}</a></p><hr/>
+    <p> <a href="tecnologia.html?id=${data[1].id}" class="text-dark text-decoration-none"> ${data[1].titulo}</a></p><hr/>
+    <p> <a href="tecnologia.html?id=${data[2].id}" class="text-dark text-decoration-none"> ${data[2].titulo}</a></p>
+    `
 
 }
 
@@ -38,9 +46,9 @@ function cargarTecnologia() {
 
 function llenarNoticias(data) {
     const noticias = document.getElementById('noticias')
-    noticias.innerHTML += `<h3 class="noticia">${data[0].titulo} - Colegio - ${data[0].fecha}</h3><div class="seccion"><span>${data[0].descripcion}. &nbsp<a href="#" id='noticias-${data[0].id}'>Ver Mas</a></span></div>
-    <h3 class="noticia">${data[1].titulo} - Colegio - ${data[0].fecha}</h3><div class="seccion pt-20"><span>${data[1].descripcion}. &nbsp<a href="#" id='noticias-${data[1].id}'>  Ver Mas</a></span></div>
-    <h3 class="noticia">${data[2].titulo} - Colegio - ${data[0].fecha}</h3><div class="seccion pt-20"><spanp>${data[2].descripcion} &nbsp<a href="#" id='noticias-${data[2].id}'>  Ver Mas</a></span></div>
+    noticias.innerHTML += `<h3 class="noticia">${data[0].titulo} - Colegio - ${data[0].fecha}</h3><div class="seccion"><span>${data[0].descripcion}. &nbsp<a href="noticia.html?id=${data[0].id}">Ver Mas</a></span></div>
+    <h3 class="noticia">${data[1].titulo} - Colegio - ${data[0].fecha}</h3><div class="seccion pt-20"><span>${data[1].descripcion}. &nbsp<a href="noticia.html?id=${data[1].id}">  Ver Mas</a></span></div>
+    <h3 class="noticia">${data[2].titulo} - Colegio - ${data[0].fecha}</h3><div class="seccion pt-20"><spanp>${data[2].descripcion} &nbsp<a href="noticia.html?id=${data[2].id}">  Ver Mas</a></span></div>
     <p id="mas-noticias">Todas las noticias</p>
     `
     const imagen = document.getElementById('imagenCarusel')
@@ -95,21 +103,6 @@ function cargarContenido(id) {
         .catch((err) => console.log(err))
 }
 
-    const noticia1 = document.getElementById('noticias-1')
-    const noticia2 = document.getElementById('noticias-2')
-    const noticia3 = document.getElementById('noticias-3')
-
-    /*
-    noticia1.addEventListener('click', function () {
-        cargarContenido("1")
-    })
-    noticia2.addEventListener('click', function () {
-        cargarContenido("2")
-    })
-    noticia3.addEventListener('click', function () {
-        cargarContenido("3")
-    })
-    */
 
 cargarFecha()
 cargarDeportes()
